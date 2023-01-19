@@ -1,0 +1,185 @@
+/* ------------------------------------------Colors------------------------------------------ */
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);/*(paragraphs)*/
+    --Very-light-gray: hsl(0, 0%, 95%);/*(background, headings, buttons)*/
+}
+
+/* ------------------------------------------Styling------------------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Very-light-gray);
+}
+
+main {
+    font-size: 15px;
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+}
+
+article {
+    max-width: 920px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* --------------------------------------------section-------------------------------------------- */
+section {
+    padding: 3rem;
+}
+
+section img {
+    margin-bottom: 1rem;
+}
+
+section h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--Very-light-gray);
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+section p{
+    max-width: 300px;
+    font-size: .94rem;
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+    font-family: 'Lexend Deca', sans-serif;
+    color: var(--Transparent-white);
+}
+
+section input {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--Very-light-gray);
+    border: 2px solid var(--Very-light-gray);
+    border-radius: 10rem;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: .7rem 1.7rem;
+    display: grid;
+    align-items: end;
+}
+
+/* ----------------------------sedans---------------------------- */
+#Sedans {
+    background-color: var(--Bright-orange);
+    border-bottom-left-radius: .5rem;
+    border-top-left-radius: .5rem;
+}
+
+#Sedans input {
+    color: var(--Bright-orange);
+}
+
+#Sedans input:hover {
+    color: var(--Very-light-gray);
+    background-color: var(--Bright-orange);
+}
+
+/* ----------------------------suvs---------------------------- */
+#SUVs {
+    background-color: var(--Dark-cyan);
+}
+
+#SUVs input {
+    color: var(--Dark-cyan);
+}
+
+#SUVs input:hover {
+    color: var(--Very-light-gray);
+    background-color: var(--Dark-cyan);
+}
+
+/* ----------------------------luxury---------------------------- */
+#Luxury {
+    background-color: var(--Very-dark-cyan);
+    border-bottom-right-radius: .5rem;
+    border-top-right-radius: .5rem;
+}
+
+#Luxury input{
+    color: var(--Very-dark-cyan);
+}
+
+#Luxury input:hover {
+    color: var(--Very-light-gray);
+    background-color: var(--Very-dark-cyan);
+}
+
+/* ------------------------------------------Footer------------------------------------------ */
+footer { 
+    font-size: 1.5rem; 
+    letter-spacing: 1px;
+    text-align: center; 
+    color: black;
+    padding: 2rem;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+footer a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* ------------------------------------------Responsive design------------------------------------------ */
+@media only screen and (max-width: 980px) {
+    body {
+        margin: 0 2rem;
+    }
+
+    section p {
+        font-size: .93rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    section p {
+        font-size: .83rem;
+    }
+
+    section input {
+        font-size: .85rem;
+        padding: .6rem 1.6rem;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    body {
+        margin: 2rem 2rem;
+    }
+
+    #Sedans {
+        border-top-left-radius: .5rem;
+        border-top-right-radius: .5rem;
+        border-bottom-left-radius: 0rem;
+    }
+
+    #Luxury {
+        background-color: var(--Very-dark-cyan);
+        border-bottom-right-radius: .5rem;
+        border-bottom-left-radius: .5rem;
+        border-top-right-radius: .0rem;
+    }
+
+    footer {
+        font-size: 1.2rem;
+    }
+
+    section p{
+        margin-bottom: 2rem;
+    }
+}
